@@ -1,2 +1,6 @@
 # PLAY-SNAKE
 Play Snake is a game with a concept where the player conspire a line which grows in length, with the line itself being a primary obstacle.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+The player controls a dot, square, or object on a bordered plane. As it moves forward, it leaves a trail behind, resembling a moving snake. In some games, the end of the trail is in a fixed position, so the snake continually gets longer as it moves. In another common scheme, the snake has a specific length, so there is a moving tail a fixed number of units away from the head. The player loses when the snake runs into the screen border, a trail or other obstacle, or itself.
