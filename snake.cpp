@@ -246,7 +246,7 @@ ll main()
 
     bool GameIsRunning=true;
 
-    ll GameSpeed=80;
+    ll GameSpeedSelect=80;
 
     short dire[2]={0,1};
 
@@ -338,7 +338,7 @@ ll main()
 
         }
 
-        Sleep(GameSpeed);
+        Sleep(GameSpeedSelect);
 
     }
 
