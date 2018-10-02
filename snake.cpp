@@ -11,8 +11,9 @@
 #include <iostream>
 #include <windows.h>
 #include <vector>
+typedef long long ll;
 using namespace std;
-int MapW,MapH;
+ll MapW,MapH;
 char Map[100][100]={
 
 "########################################################",
@@ -45,13 +46,13 @@ char Map[100][100]={
 
 struct snakeBlock{
 
-    int x,y;
+    ll x,y;
 
 };
 
 
 
-void gotoxy(int x, int y)
+void gotoxy(ll x, ll y)
 
 {
 
@@ -69,13 +70,13 @@ void drawMap(vector <snakeBlock>snake)
 
     system("cls");
 
-    for (int i=0;Map[i][0];i++)
+    for (ll i=0;Map[i][0];i++)
 
     {
 
         MapW=0;
 
-        for (int j = 0 ;Map[i][j];j++)
+        for (ll j = 0 ;Map[i][j];j++)
 
         {
 
@@ -97,7 +98,7 @@ void drawMap(vector <snakeBlock>snake)
 
     }
 
-    for (int i =0 ;i<snake.size();i++)
+    for (ll i =0 ;i<snake.size();i++)
 
     {
 
@@ -111,7 +112,7 @@ void drawMap(vector <snakeBlock>snake)
 
 
 
-bool checkLose(int x, int y,vector <snakeBlock>&snake)
+bool checkLose(ll x, ll y,vector <snakeBlock>&snake)
 
 {
 
@@ -123,7 +124,7 @@ bool checkLose(int x, int y,vector <snakeBlock>&snake)
 
     {
 
-        for (int i = 3;i<snake.size();i++)
+        for (ll i = 3;i<snake.size();i++)
 
             if (snake[i].x==x&&snake[i].y==y)
 
@@ -145,7 +146,7 @@ bool checkLose(int x, int y,vector <snakeBlock>&snake)
 
         snake.push_back(newSnake);
 
-        int rx,ry;
+        ll rx,ry;
 
         do{
 
@@ -167,7 +168,7 @@ bool checkLose(int x, int y,vector <snakeBlock>&snake)
 
 
 
-void snakeInit(int x,int y ,vector<snakeBlock> &snake)
+void snakeInit(ll x,ll y ,vector<snakeBlock> &snake)
 
 {
 
@@ -187,7 +188,7 @@ bool snakeMove(vector<snakeBlock>&snake,short dire[2])
 
 {
 
-    int oldx,oldy,x,y;
+    ll oldx,oldy,x,y;
 
     gotoxy(snake[snake.size()-1].x,snake[snake.size()-1].y);
 
@@ -209,7 +210,7 @@ bool snakeMove(vector<snakeBlock>&snake,short dire[2])
 
     {
 
-        for (int i = 1;i<snake.size();i++)
+        for (ll i = 1;i<snake.size();i++)
 
         {
 
@@ -239,13 +240,13 @@ bool snakeMove(vector<snakeBlock>&snake,short dire[2])
 
 
 
-int main()
+ll main()
 
 {
 
     bool GameIsRunning=true;
 
-    int GameSpeed=80;
+    ll GameSpeed=80;
 
     short dire[2]={0,1};
 
